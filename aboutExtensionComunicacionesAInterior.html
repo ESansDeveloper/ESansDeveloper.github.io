@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Acerca de Mi Extensión</title>
+</head>
+<body>
+    <script>
+        function toggleVisibility(divId) {
+            const div = document.getElementsByName(divId)[0];
+            if (div.style.display === "none" || div.style.display === "") {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        }
+    </script>
+    <header>
+        <h1>Acerca de Extensión Comunicación al Interior de Operaciones UAS Fáciles</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Descripción de la Extensión</h2>
+            <p>Esta extensión permite guardar los datos de cada pestaña del formulario, de una manera fácil y rápida, para reutilizarlos en futuras comunicaciones. Esto facilita el proceso y ahorra tiempo al usuario.</p>
+        </section>
+        <section>
+            <h2>Manual de Usuario</h2>
+            <a href="javascript:void(0);" onclick="toggleVisibility('Instalacion')">
+                <h3>Instalación</h3>
+            </a>
+            <div name="Instalacion" style="display:none;">
+                <p>Para instalar la extensión, sigue estos pasos:</p>
+                <ol>
+                    <li>Instala la extensión desde la Chrome store en </li>
+                    <li>Una vez instalada, verás el ícono de la extensión en la barra de herramientas de Chrome.</li>
+                    <li>
+                        Haz clic en el ícono para abrir la interfaz de la extensión. 
+                        <img src="assets/drone32.png" alt="Ícono de la extensión" style="width: 32px; height: 32px; vertical-align: middle;">
+                    </li>
+                    <li>En el popup nos aparecerá un link para ir al listado de comunicaciones, como se muestra en la siguiente imagen:</li>
+                    <img src="assets/popup.png" alt="Popup de la extensión" style="max-width: 100%; height: auto;">
+                    <li>Una vez veamos nuestras comunicaciones, podremos hacer click en alta de comunicacion</li>
+                    <li>Los controles de la extension se veran en ésta pagina arriba a la derecha</li>
+                </ol>
+            </div>
+            <h3>Uso</h3>
+            <h4>Escenarios ejemplo</h4>
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleVisibility('escenario1')">
+                        <strong>Escenario 1: Acabo de instalar la extensión y no tengo datos guardados además operador y piloto son los mismos</strong>
+                    </a>
+                    <div name="escenario1" style="display:none;">
+                        <ul>
+                            <p>En la pestaña de operador: </p>
+                            <img src="assets/EmptyCBs.png" />
+                            <li>La primera vez veremos los desplegables vacios/>, rellenaremos los datos de Operador en el formulario y <u>antes de hacer click en siguiente</u>, haremos click en el icono de guardar <img src="assets/disquete.png" /> a la derecha del primer desplegable</li>
+                            <li>Esto hará que se guarden los datos personales y el número de registro de operador en los datos internos del navegador, y nos rellenarà el primer desplegable con el nombre y apellidos del operador</li>
+                            <li>Una vez guardados los datos, haremos click en <img src="assets/siguiente.png" /></li>
+                            <li>En la siguiente pantalla (Piloto), seleccionaremos del desplegable la 'Persona' con el mismo nombre que el operador y le haremos click en el boton Rellenar de la extension.</li>
+                            <li>Ésto habrá rellenado todos los datos personales, nombre, apellidos, documento, direccion telefonos y correo electronico</li>
+                            <li>Faltará por rellenar los campos de clase y seguro</li>
+                            <li>Una vez rellenados, haremos click en <img src="assets/disquete.png" />, ésto guardará los datos para siguientes comunicaciones con éste mismo piloto</li>
+                            <li>Ahora haremos click en <img src="assets/siguiente.png" /></li>
+                            <li>Ahora que nos toca rellenar los datos del UAS, y suponiendo que tenemos un Dron DJI (u otro que disponible en el catalogo de la extension), podemos activar en el menú de la extension la opcion de mostrar drones standard</li>
+                            <li>Una vez activada, haremos click en el desplegable de modelo y nos aparecerá un listado con los drones que tenemos en la base de datos</li>
+                            <li>Seleccionamos el modelo y haremos click en rellenar</li>
+                            <li>Ésto rellenará todos los datos del UAS, faltará por rellenar el número de serie del UAS, y revisa si los datos que aparecen son correctos o modificalos si los prefieres de otra manera.</li>
+                            <li>Una vez rellenados los datos, haremos click en <img src="assets/disquete.png" /> y ya tendremos el UAS guardado para futuras comunicaciones</li>
+                            <li>Ahora haremos click en siguiente</li>
+                            <li>en la pantalla observadores, podemos agregar las personas que queramos a los datos guardados haciendo click en guardar<img src="assets/disquete.png" /> antes de 'agregar' en el formulario, o da click en <img src="assets/siguiente.png" /> directamente si no necesitas observadores</li>
+                            <li>En la siguiente pantalla, rellenaremos los datos y daremos click en <img src="assets/disquete.png" />, teniendo en cuenta que en la pestaña de operaciones tenemos varias funcionalidades adicionales que nos ayudan a rellenar los datos, por ejemplo el boton hoy+5 nos pondrá en el campo fecha la fechar que resulta de sumar 5 dias al dia actual. +1 y -1 agregan o quitan un dia al compo fecha así como el horario (cada boton tiene su tooltip explicando los horarios) y en el mapa tenemos un menú contextual para poder establecer el lugar de proteccion y el de recuperacion de manera visual directamente en el mapa</li>
+                            <img src="assets/Operacion.png" />
+                            <li>daremos a <img src="assets/guardar.png" /> para pasar a firmar, ahí la extension ya no hace nada mas.</li>
+                        </ul>
+                    </div>    
+                </li>
+                <p></p>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleVisibility('escenario2')">
+                        <strong>Escenario 2: ya tengo datos guardados y quiero rellenar todo el formulario con un solo click</strong>
+                    </a>
+                    <div name="escenario2" style="display:none;">
+                        <ul>
+                            <p>En la pestaña de operador: </p>
+                            <li>En los desplegables de cada pestaña seleccionaremos qué datos queremos</li>
+                            <img src="assets/ExtensionOperador.png" /> 
+                            <li>Una vez seleccionados, haremos click en el boton <img src="assets/hastaaqui.png" /> a la derecha del desplegable de operacion</li>
+                            <li>Ésto rellenará todas las pestañas y nos dejará directamente en operacion para poderla modificar, si no fuera necesario, simplemente <img src="assets/guardar.png" /> y pasamos a firmar.</li>
+                            <img src="assets/Operacion.png" />
+                        </ul>
+                    </div>
+                </li>
+                <p></p>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleVisibility('escenario3')">
+                        <strong>Escenario 3: Tengo datos guardados, pero quiero agregar un nuevo observador</strong>
+                    </a>
+                    <div name="escenario3" style="display:none;">
+                        <ul>
+                            <p>En la pestaña de operador: </p>
+                            <li>En los desplegables de cada pestaña seleccionaremos qué datos queremos</li>
+                            <img src="assets/ExtensionOperador.png" /> 
+                            <li>Una vez seleccionados, haremos click en el boton <img src="assets/hastaaqui.png" /> a la derecha del desplegable de observador</li>
+                            <li>Ésto rellenará los datos hasta llegar a la de observadores y parará ahí</li>
+                            <li>Rellenamos los datos del nuevo observador y le hacemos click a <img src="assets/disquete.png" />, luego le daremos a <img src="assets/Agregar.png" /> </li>
+                            <li>Damos a <img src="assets/siguiente.png" /></li>
+                            <li>Seleccionamos la operacion en el desplegable o rellenamos una nueva operacion (<img src="assets/disquete.png" /> en la extension si queremos poder volver a usar la operacion en siguientes comunicaciones) y <img src="assets/guardar.png" /> para pasar a firmar.</li>
+                        </ul>
+                    </div>
+                </li>
+                <p></p>
+                <li>
+                    <a href="javascript:void(0);" onclick="toggleVisibility('escenario4')">
+                        <strong>Escenario 4: ya he Comunicado una operacion on un dron, quiero comunicar la misma con otro dron</strong>
+                    </a>
+                    <div name="escenario4" style="display:none;">
+                        <ul>
+                            <p>En la pestaña de operador: </p>
+                            <li>En los desplegables de cada pestaña seleccionaremos qué datos queremos (cambiaremos el dron en el desplegable UAS), los datos de la última comunicacion que esten guardados en la extension estaran preseleccionados en los desplegables.</li>
+                            <li>Una vez seleccionados, haremos click en el boton <img src="assets/hastaaqui.png" /> a la derecha del desplegable de operacion</li>
+                            <li>Ésto rellenará todas las pestañas y nos dejará directamente en operacion para poderla modificar, si no fuera necesario, simplemente guardamos y pasamos a firmar.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Informacion adicional.</h2>
+            <ul>
+                <li> La extension ofrece la posibilidad de descargar los datos que estan guardados en formato JSON, allí podras ver que existen datos de personas, operadores, pilotos, Rpas, observadores y operaciones, las personas son los datos usados dentro de operadores, pilotos y observadores, que pueden ser reutilizados en cualquiera de los sentidos, por ejemplo un observador que en otra comunicacion pasa a ser piloto, podemos usar la persona para rellenar parcialmente el piloto y agregarle lo que le falte. </li>
+                <li> Al igual que podemos descargar éstos datos, también podremos subirlos de nuevo si por ejemplo nos vamos a otro ordenador y queremos tener acceso a nuestros datos grabados (no hacer ésto en ordenadores públicos o compartidos con personas en las que no confías)</li>
+                <li> La extension tiene un modo de desarrollador, que permite ver los errores y mensajes de la extension, para ello es necesario abrir la consola de desarrollador de Chrome (F12) y activar el modo desarrollador en la extension. </li>
+                <p></p>
+                <li> La extension NO envia datos fuera del navegador ni del ordenador local, los datos quedan guardados en una zona del navegador llamada Local Storage, que es local del navegador y separado de otras paginas web, ese local storage se ve solo en el navegador usado y para la pagina web de notificacion de operaciones UAS del Ministerio de Interior</li>
+            </ul>   
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
