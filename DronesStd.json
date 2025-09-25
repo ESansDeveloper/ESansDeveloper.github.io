@@ -220,6 +220,26 @@
       "VisionRpa": "SI"
     },
     {
+      "Key": "DJI Mini 5 Pro",
+      "CodClaseRpa": 13,
+      "NomFabricanteRpa": "DJI",
+      "CodModeloRpa": "mcC0",
+      "DesModeloRpa": "Mini 5 Pro",
+      "NumSerieRpa": "",
+      "MatriculaRpa": "",
+      "MtomRpa": 249,
+      "AutonomiaRpa": 36,
+      "AutopilotoRpa": "",
+      "BandaRpa": "2.4Ghz, 5.1Ghz, 5.8Ghz",
+      "ColorRpa": "gris",
+      "LucesRpa": "SI",
+      "CargaRpa": "NO",
+      "VhfRpa": "NO",
+      "ModoSRpa": "",
+      "EqEmergenciaRpa": "NO",
+      "VisionRpa": "SI"
+    },
+    {
       "Key": "DJI Mavic Air",
       "CodClaseRpa": 13,
       "NomFabricanteRpa": "DJI",
